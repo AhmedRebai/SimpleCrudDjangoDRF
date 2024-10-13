@@ -73,12 +73,19 @@ Example response:
 
 ### create_user View (views.py)
 ```python
-@api_view(['GET'])
-def get_user(request):
-    users = User.objects.all()
-    serializer = UserSerializer(users, many=True)
-    return Response(serializer.data)
+@api_view(['POST'])
+def create_user(request):
+    serializer = UserSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 ```
+
+- Method: POST
+- Description: Creates a new user based on the request data.
+- Request Body: A JSON object with name and age fields.
+- Response: Returns the newly created user object with a status code 201 Created if the data is valid. If not, returns validation errors with status 400 Bad Request.
 
 
 
