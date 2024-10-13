@@ -61,5 +61,18 @@ def get_user(request):
 - **Description**: Returns a list of all users in the database.
 - **Response**: A JSON array of user objects. Each object contains name and age fields.
 
+Example response:
+
+[
+    {
+        "name": "Pedro",
+        "age": 38
+    },
+    ...
+]
+
+
+
+
 
 
