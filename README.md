@@ -206,6 +206,10 @@ This includes the app-level URLs under the /api/ path.
     "age": 30
 }
 
+5- Delete a specific user:
+- URL: /api/users/1
+- Method: DELETE
+
 
 
 
