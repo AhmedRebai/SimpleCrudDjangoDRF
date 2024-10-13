@@ -41,8 +41,10 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = '__all__'
-
 ```
+
+- The **UserSerializer** automatically serializes all fields (age and name) of the User model.
+- It is used to convert model instances into JSON and to validate and deserialize data into a User instance.
 
 
 
