@@ -117,6 +117,28 @@ def user_detail(request, pk):
         return Response(status=status.HTTP_204_NO_CONTENT)
 ```
 
+- Methods: GET, PUT, DELETE
+- Description: Handles retrieving, updating, and deleting a specific user by its primary key (pk).
+
+GET /users/<pk>
+
+- Description: Retrieves a specific user by its pk.
+- Response: Returns the user object.
+
+Example response:
+{
+    "name": "Pedro",
+    "age": 23
+}
+
+PUT /users/<pk>
+
+- Description: Updates a specific user. The request body should include the updated name and age.
+- Request Body: A JSON object with updated name and age.
+- Response: Returns the updated user object if the request is valid.
+
+Example request:
+
 
 
 
