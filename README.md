@@ -62,7 +62,6 @@ def get_user(request):
 - **Response**: A JSON array of user objects. Each object contains name and age fields.
 
 Example response:
-
 [
     {
         "name": "Pedro",
@@ -86,6 +85,13 @@ def create_user(request):
 - Description: Creates a new user based on the request data.
 - Request Body: A JSON object with name and age fields.
 - Response: Returns the newly created user object with a status code 201 Created if the data is valid. If not, returns validation errors with status 400 Bad Request.
+
+Example request:
+{
+    "name": "Pedro",
+    "age": 23
+}
+
 
 
 
