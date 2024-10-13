@@ -168,8 +168,46 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls'))
 ]
-
 ```
+This includes the app-level URLs under the /api/ path.
+
+### Error Handling
+- 404 Not Found: If a user with the specified pk does not exist in the user_detail view, a 404 response is returned.
+- 400 Bad Request: If invalid data is provided to the create_user or user_detail views, a 400 response is returned with detailed validation errors.
+
+### Example API Requests
+
+1- GET all users:
+- URL: /api/users/
+- Method: GET
+
+2- Create a user:
+- URL: /api/users/create/
+- Method: POST
+- Request body:
+
+{
+    "name": "Alice",
+    "age": 28
+}
+
+3- Retrieve a specific user:
+
+- URL: /api/users/1
+- Method: GET
+
+4- Update a specific user:
+
+- URL: /api/users/1
+- Method: PUT
+- Request body:
+{
+    "name": "Bob",
+    "age": 30
+}
+
+
+
 
 
 
