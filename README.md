@@ -158,6 +158,19 @@ urlpatterns = [
     path('users/<int:pk>', user_detail, name='user_detail')
 ]
 ```
+- /users/ (GET): Retrieves a list of all users.
+- /users/create/ (POST): Creates a new user.
+- /users/<int:pk> (GET, PUT, DELETE): Retrieves, updates, or deletes a user based on their primary key (pk).
+
+### Project-level URLs (newproject/urls.py)
+```python
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api/', include('api.urls'))
+]
+
+```
+
 
 
 
