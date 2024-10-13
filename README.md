@@ -138,6 +138,27 @@ PUT /users/<pk>
 - Response: Returns the updated user object if the request is valid.
 
 Example request:
+{
+    "name": "John",
+    "age": 30
+}
+
+DELETE /users/<pk>
+
+    Description: Deletes a specific user by its pk.
+    Response: Returns a status of 204 No Content on successful deletion.
+
+## URLs
+
+### App-level URLs (urls.py)
+```python
+urlpatterns = [
+    path('users/', get_user, name='get_user'),
+    path('users/create/', create_user, name='create_user'),
+    path('users/<int:pk>', user_detail, name='user_detail')
+]
+```
+
 
 
 
