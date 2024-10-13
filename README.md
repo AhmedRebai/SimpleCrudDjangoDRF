@@ -420,11 +420,6 @@ urlpatterns = [
 
 6. Access the API at `http://localhost:8000/api/`.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-
 
 
 
