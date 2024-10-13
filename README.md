@@ -29,3 +29,20 @@ class User(models.Model):
     def __str__(self):
         return self.name
 ```
+
+**age**: An integer field that stores the user's age.
+**name**: A character field (max length: 100) that stores the user's name.
+
+## Serializers
+
+### UserSerializer (serializer.py)
+```python
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = '__all__'
+
+```
+
+
+
