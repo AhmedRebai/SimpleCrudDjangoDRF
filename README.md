@@ -46,5 +46,16 @@ class UserSerializer(serializers.ModelSerializer):
 - The **UserSerializer** automatically serializes all fields (age and name) of the User model.
 - It is used to convert model instances into JSON and to validate and deserialize data into a User instance.
 
+## Views
+
+### get_user View (views.py)
+```python
+@api_view(['GET'])
+def get_user(request):
+    users = User.objects.all()
+    serializer = UserSerializer(users, many=True)
+    return Response(serializer.data)
+```
+
 
 
